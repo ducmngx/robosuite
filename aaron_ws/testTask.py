@@ -2,7 +2,7 @@ import robosuite as suite
 import numpy as np
 
 env = suite.make(
-    env_name="CustomHookPull",
+    env_name= "Lift",#"CustomHookPull",
     robots="Panda",
     has_renderer=True,
     has_offscreen_renderer=False,
