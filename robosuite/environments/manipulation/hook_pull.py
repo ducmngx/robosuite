@@ -260,11 +260,13 @@ class CustomHookPull(ManipulationEnv):
         # use a shaping reward
         elif self.reward_shaping:
             # Stage 1: Reaching hook reward
-            hook_pos = self.sim.data.body_xpos[self.hook_body_id]
-            gripper_pos = self.sim.data.site_xpos[self.robots[0].eef_site_id['right']]
-            dist_to_hook = np.linalg.norm(gripper_pos - hook_pos)
-            reaching_reward = 0.5 * (1 - np.tanh(10.0 * dist_to_hook))
-            reward += reaching_reward
+            # hook_pos = self.sim.data.body_xpos[self.hook_body_id]
+            # eef_site = self.robots[0].gripper.important_sites["grip_site"]
+            # gripper_pos = self.sim.data.get_site_xpos(eef_site)
+            # # gripper_pos = self.sim.data.site_xpos[self.robots[0].eef_site_id['right']]
+            # dist_to_hook = np.linalg.norm(gripper_pos - hook_pos)
+            # reaching_reward = 0.5 * (1 - np.tanh(10.0 * dist_to_hook))
+            # reward += reaching_reward
 
             # Stage 2: Grasping hook reward (check if gripper is touching hook)
             # USE CUSTOM CHECK, NOT _check_grasp
