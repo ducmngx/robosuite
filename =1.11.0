@@ -1,0 +1,2 @@
+Requirement already satisfied: scipy in /home/aaronngx/miniconda3/envs/robosuite/lib/python3.10/site-packages (1.15.3)
+Requirement already satisfied: numpy<2.5,>=1.23.5 in /home/aaronngx/miniconda3/envs/robosuite/lib/python3.10/site-packages (from scipy) (1.24.3)
